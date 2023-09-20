@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title style="font-family: Arial, sans-serif; font-size: 24px; font-weight: bold;">Social Media Sentiment Analysis</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; text-align: center; margin: 0 auto; max-width: 600px; padding: 20px;">
+
+    <h1 style="color: #333;">Social Media Sentiment Analysis</h1>
+
+    <form action="/analyze" method="post">
+        <textarea name="text" placeholder="Enter text to analyze" style="width: 100%; padding: 10px; margin-top: 10px;"></textarea>
+        <input type="submit" value="Analyze" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; cursor: pointer; margin-top: 10px;">
+    </form>
+
+    {% if results %}
+    <h2 style="color: #333;">Sentiment Score: {{ results.score }}</h2>
+    <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 5px; color: #4CAF50;">Positive Sentiments: {{ results.positive }}</li>
+        <li style="margin-bottom: 5px; color: #FF5722;">Negative Sentiments: {{ results.negative }}</li>
+    </ul>
+    {% endif %} 
+</body>
+
+</html>
