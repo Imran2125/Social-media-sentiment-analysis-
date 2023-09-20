@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sentiment Analysis Results</title>
+    <style>
+        body {
+            font-family: Copperplate gothic, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .emoji {
+            font-size: 32px;
+        }
+
+        .positive {
+            color: #4CAF50; /* Green color for positive sentiment */
+        }
+
+        .negative {
+            color: #F44336; /* Red color for negative sentiment */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Results</h1>
+        <p>Sentiment Score: {{ sentiment_score }}</p>
+        <p class="{{ sentiment_category }}">
+            Sentiment Category: {{ sentiment_category }}
+            <span class="emoji">{{ '😄' if sentiment_category == 'Positive' else '😞' }}</span>
+        </p>
+        <!-- You can add more details or formatting as needed -->
+    </div>
+</body>
+
+</html>￼Enter
