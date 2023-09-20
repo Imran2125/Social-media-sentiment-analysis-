@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Social Media Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: "Copperplate gothic", sans-serif;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 40px;
+            background: linear-gradient(45deg, #007bff, #4CAF50); /* Gradient background */
+            border-radius: 10px; /* Border radius */
+            color: #fff; /* Font color */
+        }
+
+        h1 {
+            color: #fff; /* Heading color */
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #fff;
+            color: #007bff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e0e0e0;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .positive {
+            color: #4CAF50;
+        }
+
+        .negative {
+            color: #FF5722;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Social Media Sentiment Analysis</h1>
+
+    <form action="/analyze" method="post">
+        <label for="text" style="color: #fff; font-size: 18px;">Enter text to analyze:</label><br>
+        <textarea name="text" id="text" placeholder="Enter text to analyze"></textarea>
+        <br>
+        <input type="submit" value="Analyze">
+    </form>
+
+    {% if results %}
+    <h2>Sentiment Score: <span style="color: #fff;">{{ results.score }}</span></h2>
+    <ul>
+        <li class="positive">Positive Sentiments: <span style="color: #4CAF50;">{{ results.positive }}</span></li>
+        <li class="negative">Negative Sentiments: <span style="color: #FF5722;">{{ results.negative }}</span></li>
+    </ul>
+    {% endif %} 
+
+</body>
+
+</html>￼Enter
