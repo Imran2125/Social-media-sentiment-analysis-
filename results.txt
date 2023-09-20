@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis Results</title>
+</head>
+<body>
+    <h1>Sentiment Analysis Results</h1>
+    <p>Sentiment Score: {{ sentiment_score }}</p>
+    <p>Sentiment Category: {{ sentiment_category }}</p>
+    <!-- You can add more details or formatting as needed -->
+</body>
+</html>
+ 
